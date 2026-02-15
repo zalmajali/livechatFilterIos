@@ -103,6 +103,17 @@ ion-button{
 .margin_8{
 	margin-top: 8px;
 }
+ion-datetime {
+  .calendar-body,
+  .calendar-day {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  &.datetime-ready .calendar-body {
+    opacity: 1 !important;
+  }
+}
 .toastStyle{
 	--background: #F48022 !important;
 	--color: #ffffff;
