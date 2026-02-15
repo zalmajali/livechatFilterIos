@@ -32,3 +32,13 @@ ion-content {
   width: 100%;
   display: block;
 }
+ion-datetime {
+  .calendar-body,
+  .calendar-day,
+  .calendar-month,
+  .calendar-weekdays {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #000 !important;          // لو الأرقام بتبقى white على white
+  }
+}
