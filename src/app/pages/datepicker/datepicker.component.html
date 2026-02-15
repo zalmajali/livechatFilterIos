@@ -1,7 +1,7 @@
 <ion-content>
   <div class="largBox">
       <div class="smallBox">
-          <ion-datetime locale="en-US" presentation="date" (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='ios' ></ion-datetime>
+          <ion-datetime locale="en-US" [value]="today" [preferWheel]="false" presentation="date" (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='md'></ion-datetime>
         </div>
   </div>
 </ion-content>
