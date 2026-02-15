@@ -1,7 +1,23 @@
 <ion-content>
   <div class="largBox">
-      <div class="smallBox">
-          <ion-datetime locale="en-US" [value]="today" [preferWheel]="false" presentation="date" (ionCancel)="functionClosePage()" (ionChange)="selectDate($event)" [showDefaultButtons]="true" doneText="{{ok}}" cancelText="{{cancel}}" mode='md'></ion-datetime>
-        </div>
+    <div class="smallBox">
+      <!-- أضف الـ div ده -->
+      <div class="datetime-wrapper">
+        <ion-datetime
+          locale="en-US"
+          [preferWheel]="false"
+          presentation="date"
+          (ionCancel)="functionClosePage()"
+          (ionChange)="selectDate($event)"
+          [showDefaultButtons]="true"
+          doneText="{{ok}}"
+          cancelText="{{cancel}}"
+          mode="md"
+
+          min="2020-01-01"      <!-- مهم لو عندك سنين مستقبلية -->
+          max="2065-12-31"
+        ></ion-datetime>
+      </div>
+    </div>
   </div>
 </ion-content>
