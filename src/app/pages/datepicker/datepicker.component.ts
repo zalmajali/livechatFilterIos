@@ -33,6 +33,7 @@ public checkLanguage: any=0;
 public language: any;
 public menuDirection: any;
 public menuDirectionTow: any;
+today:any
 constructor(private alertController:AlertController,private globalization: Globalization, private translate: TranslateService,private modalController: ModalController,private network:Network,private menu:MenuController,private storage: Storage,private platform: Platform,private navCtrl: NavController,private toastCtrl: ToastController,private loading: LoadingController) {
   this.platform.backButton.subscribeWithPriority(10, () => {
     this.modalController.dismiss({})
@@ -53,6 +54,7 @@ async initialiseTranslation(){
     });
 }
   async ngOnInit() {
+    this.today = new Date().toISOString();
     await this.getDeviceLanguage();
     await this.checkLoginUser();
   }
